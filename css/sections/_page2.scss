@@ -1,0 +1,35 @@
+.page2{
+    background: url(../../img/bg2.svg);
+    background-size: cover;
+    height: 100vh;
+    width: 60%;
+    padding: 0 20%;
+    @include flex;
+    .card{
+        box-shadow: -5px -5px 10px rgb(35, 35, 68);   
+        text-align: center;
+        width: 30%;
+        height: 40%;
+        padding: 2rem;
+        border-radius: 5px;
+        margin: 0 2%;
+        background: #3572B5;
+        .txt{
+            h2{
+                margin-bottom: 2rem;
+            }
+            img{
+                width: 80%;
+            }
+            p{
+                margin: 1rem 0;
+            }
+            a{
+                border: 2px solid black;
+            }
+            height: 100%;
+            @include flex;
+            flex-direction: column;
+        }
+    }
+}

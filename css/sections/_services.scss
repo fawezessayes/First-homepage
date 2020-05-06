@@ -1,0 +1,30 @@
+.services{
+    height: 100vh;
+    @include flex;
+    div{
+        width: 20%;
+        height: 50%;
+        color: white;
+        border-radius: 5px;
+        background-color: rgb(40, 39, 46);
+        margin: 0 2rem;
+        padding: 5rem 3rem;
+        text-align: center;
+        h1{
+            font-size: 2rem;
+        }
+        img{
+            height: 50%;
+            margin-bottom: 3rem;
+        }
+        p{
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        a{
+            color: white;
+            margin: 0 .5rem;
+            border: 2px solid white;
+        }
+    }
+}

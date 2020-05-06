@@ -1,0 +1,57 @@
+.page1{
+    color: white;
+    height: 100vh;
+    background: url("../../img/bg.jpg");
+    header{
+        background: #080844a9;
+        height: 8%;
+        @include flex;
+        a{
+            color: inherit;
+            font-size: 1.2rem;
+            font-weight: 400;
+            text-decoration: none;
+            margin: 0 2rem;
+        }
+    }
+    .hero{
+        @include flex;
+        flex-direction: column;
+        height: 92%;
+        &:hover > .arrow{
+            transform: translate(0, 100px);
+            opacity: 1;
+        }
+        div{    
+            transform: translate(0, -100px);
+            text-align: center;
+            
+            h1{
+                margin-bottom: 1rem;
+                font-size: 4rem;
+                padding: 0  10px;
+                background-color: rgba(73, 131, 207, 0.096);
+            }
+            p{
+                font-size: 1.5rem;
+                font-weight: 300;
+            }
+        }
+        .arrow{
+            width: 100px;
+            opacity: 0;
+            transform: translate(0,0);
+            transition: all .5s ease-in;
+            animation: drop infinite 1.5s ease-in;
+            @keyframes drop {
+                0%{
+                    transform: translate(0,0);
+                    opacity: 0;
+                }100%{
+                    opacity: 1;
+                    transform: translate(0,100px);
+                }
+            }
+        }
+    }
+}

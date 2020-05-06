@@ -1,0 +1,49 @@
+.contact{
+    height: 90vh;
+    background: rgb(41, 41, 49);
+    @include flex;
+    .content{
+        box-shadow: -5px -5px 10px rgb(32, 32, 34);
+        position: relative;
+        width: 40%;
+        height: 30%;
+        padding: 10rem;
+        border-radius: 10px;
+        background-color: #31313b;
+        @include flex;
+        flex-direction: column;
+        img{
+            width: 300px;
+        }
+        .form{
+            @include flex;
+        }
+        input{
+            font-size: 1.1rem;
+            color: white;
+            outline: none;
+            border: 2px solid rgb(40, 37, 59);
+            background: #292931;
+            display: block;
+            padding: .5rem 1rem ;
+            margin: 1.2rem;
+        }
+        textarea{
+            font-family: inherit;
+            font-size: 1.1rem;
+            color: white;
+            outline: none;
+            border: 2px solid rgb(40, 37, 59);
+            background: #292931;
+        }
+        a{
+            margin: 1rem;
+            bottom: 0;
+            position: absolute;
+            background: white;
+            padding: 0.5rem 2rem;
+            border: 2px solid white;
+            font-size: 1.2rem;
+        }
+    }
+}

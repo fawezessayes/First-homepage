@@ -1,0 +1,12 @@
+footer{
+    @include flex;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    height: 10vh;
+    background: rgb(36, 35, 41);
+    .copy{
+        font-size: 1.1rem;
+        font-weight: 300;
+    }
+}
