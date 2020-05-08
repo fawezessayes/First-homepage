@@ -1,12 +1,15 @@
 .page1{
     color: white;
-    height: 100vh;
-    background: url("../../img/bg.jpg");
+    height: 940px;
+    background: url("https://spacenews.com/wp-content/uploads/2018/05/24359364107_152b0152ff_k.jpg");
     header{
+        position: fixed;
         background: #080844a9;
-        height: 8%;
+        height: 70px;
+        width: 100%;
         @include flex;
-        a{
+        p{
+            cursor: pointer;
             color: inherit;
             font-size: 1.2rem;
             font-weight: 400;
@@ -23,7 +26,7 @@
             opacity: 1;
         }
         div{    
-            transform: translate(0, -100px);
+            transform: translate(0, -0);
             text-align: center;
             
             h1{
@@ -51,6 +54,29 @@
                     opacity: 1;
                     transform: translate(0,100px);
                 }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px){
+    .page1{
+        height: 70vh;
+        header{
+            opacity: 0;
+        }
+        .hero{
+            div{
+                margin: 0 .5rem;
+                transform: translate(0,0);
+                h1{
+                    font-size: 2.5rem;
+                }
+                p{
+                    font-size: 1rem;
+                }
+            }
+            .arrow{
+                width: 50px;
             }
         }
     }

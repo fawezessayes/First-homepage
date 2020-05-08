@@ -20,13 +20,15 @@ a {
 
 .page1 {
   color: white;
-  height: 100vh;
-  background: url("../../img/bg.jpg");
+  height: 940px;
+  background: url("https://spacenews.com/wp-content/uploads/2018/05/24359364107_152b0152ff_k.jpg");
 }
 
 .page1 header {
+  position: fixed;
   background: #080844a9;
-  height: 8%;
+  height: 70px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,7 +40,8 @@ a {
           justify-content: center;
 }
 
-.page1 header a {
+.page1 header p {
+  cursor: pointer;
   color: inherit;
   font-size: 1.2rem;
   font-weight: 400;
@@ -70,8 +73,8 @@ a {
 }
 
 .page1 .hero div {
-  -webkit-transform: translate(0, -100px);
-          transform: translate(0, -100px);
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
   text-align: center;
 }
 
@@ -124,10 +127,33 @@ a {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .page1 {
+    height: 70vh;
+  }
+  .page1 header {
+    opacity: 0;
+  }
+  .page1 .hero div {
+    margin: 0 .5rem;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .page1 .hero div h1 {
+    font-size: 2.5rem;
+  }
+  .page1 .hero div p {
+    font-size: 1rem;
+  }
+  .page1 .hero .arrow {
+    width: 50px;
+  }
+}
+
 .page2 {
   background: url(../../img/bg2.svg);
   background-size: cover;
-  height: 100vh;
+  height: 940px;
   width: 60%;
   padding: 0 20%;
   display: -webkit-box;
@@ -142,15 +168,16 @@ a {
 }
 
 .page2 .card {
-  -webkit-box-shadow: -5px -5px 10px #232344;
-          box-shadow: -5px -5px 10px #232344;
+  -webkit-box-shadow: -5px -5px 10px #1f1f27;
+          box-shadow: -5px -5px 10px #1f1f27;
   text-align: center;
   width: 30%;
-  height: 40%;
+  height: auto;
   padding: 2rem;
   border-radius: 5px;
   margin: 0 2%;
-  background: #3572B5;
+  background: #31313b;
+  color: white;
 }
 
 .page2 .card .txt {
@@ -171,6 +198,7 @@ a {
 }
 
 .page2 .card .txt h2 {
+  font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
@@ -183,11 +211,28 @@ a {
 }
 
 .page2 .card .txt a {
-  border: 2px solid black;
+  border: 2px solid white;
+}
+
+@media only screen and (max-width: 768px) {
+  .page2 {
+    background: #292931;
+    width: 100%;
+    padding: 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: auto;
+  }
+  .page2 .card {
+    padding: 2rem 1rem;
+    margin: 1rem 0;
+    height: auto;
+    width: 80%;
+  }
 }
 
 .services {
-  height: 100vh;
+  height: 940px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -201,7 +246,7 @@ a {
 
 .services div {
   width: 20%;
-  height: 50%;
+  height: auto;
   color: white;
   border-radius: 5px;
   background-color: #28272e;
@@ -210,12 +255,24 @@ a {
   text-align: center;
 }
 
+.services div section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .services div h1 {
   font-size: 2rem;
 }
 
 .services div img {
-  height: 50%;
+  width: 80%;
   margin-bottom: 3rem;
 }
 
@@ -230,8 +287,41 @@ a {
   border: 2px solid white;
 }
 
+@media only screen and (max-width: 768px) {
+  .services {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: auto;
+  }
+  .services div {
+    width: 90%;
+    padding: 1rem;
+    margin: 10px;
+  }
+  .services div h1 {
+    font-size: 1.5rem;
+  }
+  .services div img {
+    margin-bottom: 0;
+    width: 60%;
+  }
+  .services div p {
+    font-size: 1rem;
+    margin: 10px;
+  }
+  .services div a {
+    margin: 5px;
+  }
+  .services div section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .contact {
-  height: 90vh;
+  height: 940px;
   background: #292931;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -312,6 +402,29 @@ a {
   padding: 0.5rem 2rem;
   border: 2px solid white;
   font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .contact {
+    padding: 2rem 0;
+    height: auto;
+  }
+  .contact .content {
+    height: auto;
+    width: 90%;
+    padding: 0;
+    padding-bottom: 5rem;
+  }
+  .contact .content .form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+  .contact .content .form textarea {
+    width: 85%;
+  }
 }
 
 footer {

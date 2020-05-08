@@ -1,21 +1,23 @@
 .page2{
     background: url(../../img/bg2.svg);
     background-size: cover;
-    height: 100vh;
+    height: 940px;
     width: 60%;
     padding: 0 20%;
     @include flex;
     .card{
-        box-shadow: -5px -5px 10px rgb(35, 35, 68);   
+        box-shadow: -5px -5px 10px #1f1f27;   
         text-align: center;
         width: 30%;
-        height: 40%;
+        height: auto;
         padding: 2rem;
         border-radius: 5px;
         margin: 0 2%;
-        background: #3572B5;
+        background: #31313b;
+        color: white;
         .txt{
             h2{
+                font-size: 1.2rem;
                 margin-bottom: 2rem;
             }
             img{
@@ -25,11 +27,27 @@
                 margin: 1rem 0;
             }
             a{
-                border: 2px solid black;
+                border: 2px solid white;
             }
             height: 100%;
             @include flex;
             flex-direction: column;
+        }
+    }
+}
+// responsive
+@media only screen and (max-width: 768px){
+    .page2{
+        background: #292931;
+        width: 100%;
+        padding: 0;
+        flex-wrap: wrap;
+        height: auto;
+        .card{
+            padding: 2rem 1rem;
+            margin: 1rem 0;
+            height: auto;
+            width: 80%;
         }
     }
 }

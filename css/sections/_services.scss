@@ -1,9 +1,12 @@
 .services{
-    height: 100vh;
+    height: 940px;
     @include flex;
     div{
+        section{
+            @include flex;
+        }
         width: 20%;
-        height: 50%;
+        height: auto;
         color: white;
         border-radius: 5px;
         background-color: rgb(40, 39, 46);
@@ -14,7 +17,7 @@
             font-size: 2rem;
         }
         img{
-            height: 50%;
+            width: 80%;
             margin-bottom: 3rem;
         }
         p{
@@ -25,6 +28,34 @@
             color: white;
             margin: 0 .5rem;
             border: 2px solid white;
+        }
+    }
+}
+@media only screen and (max-width: 768px){
+    .services{
+        flex-wrap: wrap;
+        height: auto;
+        div{
+            h1{
+                font-size: 1.5rem;
+            }
+            img{
+                margin-bottom: 0;
+                width: 60%;
+            }
+            p{
+                font-size: 1rem;
+                margin: 10px;
+            }
+            a{
+                margin: 5px;
+            }
+            section{
+                flex-direction: column;
+            }
+            width: 90%;
+            padding: 1rem;
+            margin: 10px;
         }
     }
 }
